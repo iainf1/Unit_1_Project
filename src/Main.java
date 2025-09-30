@@ -11,17 +11,17 @@ public class Main {
         int ppl = (s.nextInt());
         double tip = (billInt*(tipPercent*0.1)/100);
         double total = ((double) billInt/10+tip);
-        double tipPerPerson = ((int) ((tip/ppl)*100)/100.0);
-        double totalPerPerson = ((int) ((total/ppl)*100)/100.0);
+        double tipPerPerson = tip/ppl;
+        double totalPerPerson = total/ppl;
         System.out.println();
         System.out.println("--------------------------------");
-        System.out.println("Total Tip Amount: $" + tip + "        |");
+        System.out.printf("Total Tip Amount: $%.2f        |%n", tip);
         System.out.println("--------------------------------");
-        System.out.println("Total bill cost: $" + total + "        |");
+        System.out.printf("Total bill cost: $%.2f        |%n", total);
         System.out.println("--------------------------------");
-        System.out.println("Tip per person: $" + tipPerPerson + "          |");
+        System.out.printf("Tip per person: $%.2f          |%n", tipPerPerson);
         System.out.println("--------------------------------");
-        System.out.println("Total bill per person: $" + totalPerPerson + "   |");
+        System.out.printf("Total bill per person: $%.2f   |%n", totalPerPerson);
         System.out.println("--------------------------------");
 
 
