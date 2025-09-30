@@ -4,12 +4,12 @@ public class Main {
         Scanner s = new Scanner(System.in);
         System.out.println("----------------------------------------------------------------");
         System.out.print("Enter your Bill($): ");
-        int billInt = (int) (s.nextDouble()*10.0);
+        int billInt = (int) (s.nextDouble()*10);
         System.out.print("Tip Percent: ");
         int tipPercent = (s.nextInt());
         System.out.print("Number of People: ");
         int ppl = (s.nextInt());
-        double tip = (billInt*(tipPercent/1000.0));
+        double tip = (billInt*(tipPercent*0.1)/100);
         double total = ((double) billInt/10+tip);
         double tipPerPerson = ((int) ((tip/ppl)*100)/100.0);
         double totalPerPerson = ((int) ((total/ppl)*100)/100.0);
@@ -23,6 +23,8 @@ public class Main {
         System.out.println("--------------------------------");
         System.out.println("Total bill per person: $" + totalPerPerson + "   |");
         System.out.println("--------------------------------");
+
+
 
 
     }
